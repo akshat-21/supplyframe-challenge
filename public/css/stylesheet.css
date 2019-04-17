@@ -1,0 +1,297 @@
+/* Outline CSS */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+ }
+
+p {
+  color: #171717;
+  font-size: 20px;
+  font-family: "Asap";
+  margin: 8px 0px !important; 
+}
+
+h2 {
+  font-family: "Abel";
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 2px;
+  margin: 30px auto;
+  text-align: center; 
+}
+
+h5 {
+  text-align: center;
+}
+
+/* CSS for main container */
+.container-fluid {
+  padding: 20px 100px; }
+
+.loader-wrapper {
+  padding: 20vh 50px; }
+
+.loader-text {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Asap"; }
+
+.loader {
+  border: 8px solid #00FFFF;
+  border-top: 8px solid #171717;
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  animation: spin 1.5s linear infinite;
+  margin: 0px auto; }
+
+/* Number of Projects Shown in a page */
+.number-of-projects-shown{
+  right: 20px;
+  position: absolute;
+}
+
+.project-count-data{
+  margin-left: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+/* CSS for Pagination */
+.page-navigation {
+  display: none; }
+
+.pagination {
+  justify-content: center;
+  margin: 10vh 0px; 
+}
+
+.page-item.disabled .page-link {
+  opacity: 0.5;
+  background-color: #171717;
+  border-color: black; }
+
+.page-item.active .page-link {
+  color: #171717;
+  background-color: white;
+  border-color: white; 
+}
+
+.page-link {
+  padding: 0.75rem 1rem;
+  color: #FFFFFF;
+  background-color: #171717;
+  border-color: black;
+}
+
+.page-link:hover {
+  color: white;
+  background-color: black;
+  border-color: black; 
+}
+
+.grid-wrapper {
+  display: none;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px; }
+
+.grid-item {
+  width: 300px;
+  height: 400px;
+  background-color: #171717;
+}
+
+.grid-stats {
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.skulls-logo{
+  background-color: black;
+}
+
+/* CSS for each card of the project */
+.card{
+  height: 600px;
+}
+
+.card-img-top{
+  height: 300px;
+}
+
+.card-title{
+  min-height: 60px;
+}
+
+.card-text.data{
+  min-height: 100px;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+  justify-content: center; }
+
+.card-text .name {
+  min-height: 120px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 0px 10px;
+  padding-top: 10px; }
+
+.card-text.summary {
+  min-height: 150px;
+  padding: 0px 10px; }
+
+.card-text.owner {
+  font-size: 18px;
+  min-height: 30px;
+  font-family: "Asap";
+  text-align: center;
+  margin: 8px 0px !important; }
+
+.card-text.stats {
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 10px;
+  font-size: 16px;
+}
+
+.card-text .project-owner {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0px 10px;
+  display: inline-block;
+  position: relative; }
+
+.card-text .project-owner .tooltip {
+  cursor: default;
+  visibility: hidden;
+  font-family: "Asap";
+  width: 300px;
+  text-align: center;
+  padding: 15px 0;
+  z-index: 2;
+  opacity: 1;
+  padding: 6px 12px;
+  border: 2px solid #171717;
+  position: absolute;
+  left: -150px;
+  top: 25px; }
+
+/* CSS for tooltip displaying Owner info */
+.tooltip {
+  cursor: default;
+  visibility: hidden;
+  font-family: "Asap";
+  width: 300px;
+  text-align: center;
+  padding: 15px 0;
+  z-index: 2;
+  opacity: 1;
+  padding: 6px 12px;
+  border: 2px solid #171717;
+  position: absolute;
+  left: -150px;
+  top: 25px; }
+
+.card-text .project-owner:hover .tooltip {
+  visibility: visible; 
+  padding: 0px;}
+
+.tooltip-text {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Asap"; }
+
+.tooltip-loader {
+  border-top: 4px solid #171717;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  animation: spin 1.5s linear infinite;
+  margin: 10px auto; }
+
+.to-empty {
+  text-align: justify; 
+  background-color: #FFFFFF
+}
+
+.to-empty .owner-stats {
+  padding: 8px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.owner-text {
+  font-size: 15px;
+  padding: 0px 20px; }
+
+/* CSS for top and down buttons */
+.to-top, .to-bottom{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
+.to-top a {
+  color: gold;
+  padding: 10px 5px; }
+
+.to-top p {
+  font-size: 16px;
+}
+.top-button{
+  position: fixed;
+  bottom: 70px;
+  right: 50px;
+  z-index: 99;
+}
+.bottom-button{
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  z-index: 99;
+}
+
+/* Handling responsiveness for the website */
+@media screen and (max-width: 1200px) {
+  .container-fluid {
+    padding: 20px 20px; }
+  .grid-wrapper {
+    grid-template-rows: repeat(17, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0px 10px; } }
+
+@media screen and (max-width: 992px) {
+  .container-fluid {
+    padding: 20px 20px; }
+  .grid-wrapper {
+    grid-template-rows: repeat(17, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0px 30px; } }
+
+@media screen and (max-width: 768px) {
+  .container-fluid {
+    padding: 20px 40px; }
+  .grid-wrapper {
+    grid-template-rows: repeat(25, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0px 30px; } }
+
+@media screen and (max-width: 576px) {
+  .container-fluid {
+    padding: 20px 20px; }
+  .grid-wrapper {
+    grid-template-rows: repeat(50, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0px 20px; } }

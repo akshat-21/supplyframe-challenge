@@ -12,8 +12,6 @@
 
     var old = $.fn.twbsPagination;
 
-    // PROTOTYPE AND CONSTRUCTOR
-
     var TwbsPagination = function (element, options) {
         this.$element = $(element);
         this.options = $.extend({}, $.fn.twbsPagination.defaults, options);

@@ -14,10 +14,12 @@ var corsOptions = {
 }
 app.use(cors(corsOptions));
 
+/* Checking Node connectivity on port 4000*/ 
 app.get('/',(req,res)=>{
     res.send("Hello");
 });
 
+/**API call to fetch projects on a given page**/
 app.get("/projects", function(req, res) {
 
 	var apikey = "N1eKqagx67HWl1wn";
@@ -35,11 +37,11 @@ app.get("/projects", function(req, res) {
 	    }
 	});
 });
-
+/**API call to fetch owner details**/
 app.get("/owner", function(req, res) {
 
 	var apikey = "N1eKqagx67HWl1wn";
-    var owner_id = req.query.owner_id;
+	var owner_id = req.query.owner_id;
 	url = "http://api.hackaday.io/v1/users/" + owner_id + "?api_key=" + apikey;
 
 	request.get({
@@ -53,6 +55,5 @@ app.get("/owner", function(req, res) {
 	    }
 	});
 });
-
 
 module.exports = app;

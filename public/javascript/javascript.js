@@ -80,12 +80,10 @@ function populate(data) {
     /* Implemented mouseenter and mouseleave jQuery to implement the tooltip */
     $('.project-owner').mouseenter(function() {
         html_append = "";
-        var apikey = "N1eKqagx67HWl1wn";
         var owner_id = $(this).clone().children().remove().end().text();
-        var owner_url = "http://api.hackaday.io/v1/users/" + owner_id + "?api_key=" + apikey;
         
         $.ajax({
-            url: owner_url,
+            url: "/owner?owner_id="+owner_id,
             type: "GET",
 
             success: function(data) {

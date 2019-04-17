@@ -10,6 +10,7 @@ Features implemented:
 - Top and down button to directly move to top or bottom of the whole page.
 - Display count of projects shown on each page.
 - Display icon purpose on hover over icon
+- Responsive design
 
 Steps to run the project- 
 1. Run this command on terminal: `npm start / node server.js / nodemon`
